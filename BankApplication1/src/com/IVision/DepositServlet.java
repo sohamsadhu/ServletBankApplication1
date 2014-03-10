@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@SuppressWarnings("serial")
 public class DepositServlet extends HttpServlet {
 
 	public void service(HttpServletRequest request, HttpServletResponse response) {
@@ -25,7 +26,7 @@ public class DepositServlet extends HttpServlet {
 			String amount = request.getParameter("amount");
 			String account = request.getParameter("account");
 			ResultSet rs = stmt.executeQuery("UPDATE customer SET balance=balance + "+ amount +
-					"WHERE account_number="+ account);
+					" WHERE account_number="+ account);
 			int balance = 0;
 			rs = stmt.executeQuery("SELECT balance FROM customer WHERE account_number="+ account);
 			while(rs.next()) {

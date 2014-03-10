@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<title>Transfer to another account</title>
+<title>Login</title>
 </head>
 <body>
   <ul class="top-nav-ul">
@@ -22,11 +22,9 @@
   </ul>
   <br/>
   <br/>
-  <form action="/BankApplication1/transfer">
-   Enter the account number you want to transfer from: 
-   <input type="number" name="from_account" placeholder="From account number"/> <br/>
-   To account: <input type="number" name="to_account" placeholder="To account number"/> <br/>
-   And the amount: $<input type="number" name="amount" placeholder="Amount"/> <br/>
+  <form action="/BankApplication1/login">
+   User name: <input type="text" name="user_name" placeholder="User name"/> <br/>
+   Password: <input type="password" name="usr_pswd" placeholder="Password"/> <br/>
    <input type="submit" value="Submit"/>
   </form>
 </body>
