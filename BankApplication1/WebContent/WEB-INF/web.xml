@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BankApplication1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>DB_URL</param-name>
+    <param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_UNAME</param-name>
+    <param-value>Soham</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DB_PSWD</param-name>
+    <param-value>Soham</param-value>
+  </context-param>
+  
+  <servlet-mapping>
+    <servlet-name>BalanceServlet</servlet-name>
+    <url-pattern>/balance</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BalanceServlet</servlet-name>
+    <servlet-class>com.IVision.BalanceServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DepositServlet</servlet-name>
+    <url-pattern>/deposit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DepositServlet</servlet-name>
+    <servlet-class>com.IVision.DepositServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>OpenAccountServlet</servlet-name>
+    <url-pattern>/open_account</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OpenAccountServlet</servlet-name>
+    <servlet-class>com.IVision.OpenAccountServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TransferServlet</servlet-name>
+    <url-pattern>/transfer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TransferServlet</servlet-name>
+    <servlet-class>com.IVision.TransferServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WithdrawServlet</servlet-name>
+    <url-pattern>/withdraw</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>WithdrawServlet</servlet-name>
+    <servlet-class>com.IVision.WithdrawServlet</servlet-class>
+  </servlet>
+</web-app>

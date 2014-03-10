@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<title>Withdraw</title>
+</head>
+<body>
+  <ul class="top-nav-ul">
+    <li class="top-nav-list"><a href="openacct.html"
+      class="top-nav-anchor">Open Account</a></li>
+    <li class="top-nav-list"><a href="balance.html"
+      class="top-nav-anchor">Balance</a></li>
+    <li class="top-nav-list"><a href="deposit.html"
+      class="top-nav-anchor">Deposit</a></li>
+    <li class="top-nav-list"><a href="withdraw.html"
+      class="top-nav-anchor">Withdraw</a></li>
+    <li class="top-nav-list"><a href="transfer.html"
+      class="top-nav-anchor">Transfer</a></li>
+  </ul>
+  <br/>
+  <br/>
+  <form action="/BankApplication1/withdraw">
+   Enter the account number you want to withdraw from: 
+   <input type="number" name="account" placeholder="Account number"/> <br/>
+   And the amount: $<input type="number" name="amount" placeholder="Amount"/> <br/>
+   <input type="submit" value="Submit"/>
+  </form>  
+</body>
+</html>
