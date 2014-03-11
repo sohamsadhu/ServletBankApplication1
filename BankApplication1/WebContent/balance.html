@@ -2,30 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
 <title>Check Balance</title>
 </head>
 <body>
-	<ul class="top-nav-ul">
-    <li class="top-nav-list"><a href="openacct.html"
-      class="top-nav-anchor">Open Account</a></li>
-    <li class="top-nav-list"><a href="balance.html"
-      class="top-nav-anchor">Balance</a></li>
-    <li class="top-nav-list"><a href="deposit.html"
-      class="top-nav-anchor">Deposit</a></li>
-    <li class="top-nav-list"><a href="withdraw.html"
-      class="top-nav-anchor">Withdraw</a></li>
-    <li class="top-nav-list"><a href="transfer.html"
-      class="top-nav-anchor">Transfer</a></li>
-    <li class="top-nav-list"><a href="login.html"
-      class="top-nav-anchor">Login</a></li>
-  </ul>
-	<br/>
-	<br/>
-	<form action="/BankApplication1/balance">
-	 Enter the account number you want to see the balance for: 
-	 <input type="number" name="account" placeholder="Account number"/> <br/>
-	 <input type="submit" value="Submit"/>
-	</form>
+	<div id="topnav" style="background-color: #dddddd;">
+		<nav class="top-bar" data-topbar>
+			<a href="openacct.html">Open Account</a> | <a href="balance.html">Balance</a>
+			| <a href="deposit.html">Deposit</a> | <a href="withdraw.html">Withdraw</a>
+			| <a href="transfer.html">Transfer</a> | <a href="login.html">Login</a>
+		</nav>
+	</div>
+	<div id="body">
+		<form action="/BankApplication1/balance">
+			Enter the account number you want to see the balance for: <input
+				type="number" name="account" placeholder="Account number" /> <br />
+			<input type="submit" value="Submit" />
+		</form>
+	</div>
 </body>
 </html>

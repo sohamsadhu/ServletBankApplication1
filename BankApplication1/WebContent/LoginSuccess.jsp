@@ -6,25 +6,17 @@
 <!--  Credit Pankaj Kumar
 http://www.journaldev.com/1907/java-servlet-session-management-tutorial-with-examples-of-cookies-httpsession-and-url-rewriting -->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
 <title>You are logged in!</title>
 </head>
 <body>
-  <ul class="top-nav-ul">
-    <li class="top-nav-list"><a href="openacct.html"
-      class="top-nav-anchor">Open Account</a></li>
-    <li class="top-nav-list"><a href="balance.html"
-      class="top-nav-anchor">Balance</a></li>
-    <li class="top-nav-list"><a href="deposit.html"
-      class="top-nav-anchor">Deposit</a></li>
-    <li class="top-nav-list"><a href="withdraw.html"
-      class="top-nav-anchor">Withdraw</a></li>
-    <li class="top-nav-list"><a href="transfer.html"
-      class="top-nav-anchor">Transfer</a></li>
-    <li class="top-nav-list"><a href="login.html"
-      class="top-nav-anchor">Login</a></li>
-  </ul>
-	<%
+	<div id="topnav" style="background-color: #dddddd;">
+		<nav class="top-bar" data-topbar> <a href="openacct.html">Open
+			Account</a> | <a href="balance.html">Balance</a> | <a href="deposit.html">Deposit</a>
+		| <a href="withdraw.html">Withdraw</a> | <a href="transfer.html">Transfer</a>
+		| <a href="login.html">Login</a> </nav>
+	</div>
+	<div id="body">
+		<%
 	  //allow access only if session exists
 	  String user = null;
 	  if (session.getAttribute("user") == null) {
@@ -46,14 +38,15 @@ http://www.journaldev.com/1907/java-servlet-session-management-tutorial-with-exa
 	    }
 	  }
 	%>
-	<h3>
-		Hi
-		<%=userName%>, Login successful. Your Session ID=<%=sessionID%></h3>
-	<br/> User = <%=user%>
-	<br/>
-	<a href="Logout.jsp">Checkout Page</a>
-	<form action="/BankApplication1/logout" method="post">
-		<input type="submit" value="Logout">
-	</form>
+		<h3>
+			Hi
+			<%=userName%>, Login successful. Your Session ID=<%=sessionID%></h3>
+		<br /> User =
+		<%=user%>
+		<br /> <a href="Logout.jsp">Checkout Page</a>
+		<form action="/BankApplication1/logout" method="post">
+			<input type="submit" value="Logout">
+		</form>
+	</div>
 </body>
 </html>
